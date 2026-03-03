@@ -20,7 +20,7 @@ function Game() {
        
         switch(message.type){
             case INIT_GAME:
-                setChess(new Chess());
+
                 setBoard(chess.board());
                 console.log("Game initialized");
                 break;
@@ -45,7 +45,7 @@ function Game() {
       <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
         
         <div className="md:col-span-4 flex justify-center items-start">
-          <ChessBoard socket={socket} board={board} />
+          <ChessBoard setBoard={setBoard} chess={chess} socket={socket} board={board} />
         </div>
         <div className="md:col-span-2 bg-[#262421] rounded-lg p-6 shadow-lg h-fit border border-white/5">
           <div className="flex flex-col gap-6">

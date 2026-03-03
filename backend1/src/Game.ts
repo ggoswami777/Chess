@@ -32,6 +32,7 @@ export class Game{
         from:string;
         to:string;
     }){
+        console.log(move);
         // validation
         if(this.board.turn()==='w' && socket!==this.player1){
             return;
